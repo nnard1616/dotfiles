@@ -185,6 +185,9 @@ endif
 " shows line numbers
 set number
 
+" put cursor to mouse on click
+set mouse=a
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
