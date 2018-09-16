@@ -83,7 +83,9 @@ call vundle#end()            " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Personal Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+noremap <silent> <C-S>          :update<CR>
+vnoremap <silent> <C-S>         <C-C>:update<CR>
+inoremap <silent> <C-S>         <C-O>:update<CR>
 
 " Everything below is adapted from:
 " > https://github.com/amix/vimrc/
