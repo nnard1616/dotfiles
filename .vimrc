@@ -83,9 +83,20 @@ call vundle#end()            " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Personal Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ctrl s maps to save in all major views
 noremap <silent> <C-S>          :update<CR>
 vnoremap <silent> <C-S>         <C-C>:update<CR>
 inoremap <silent> <C-S>         <C-O>:update<CR>
+
+" maps ctrl z to undo last action in insert mode
+inoremap <silent> <C-Z>         <C-O>u
+noremap <silent> <C-Z>          u
+" maps ctrl x to redo last action in insert mode 
+inoremap <silent> <C-X>       <C-O><C-R>
+
+" makes space partition insert actions
+inoremap <Space>               <Space><C-g>u
+
 
 " Everything below is adapted from:
 " > https://github.com/amix/vimrc/
