@@ -201,6 +201,13 @@ set number
 " show relative line numbers, when both number and relativenumber are enabled, hybrid line numbers are made
 set relativenumber 
 
+" will toggle relative numbers when switching between buffers
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
 " put cursor to mouse on click
 set mouse=a
 
