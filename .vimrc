@@ -198,6 +198,9 @@ endif
 " shows line numbers
 set number
 
+" show relative line numbers, when both number and relativenumber are enabled, hybrid line numbers are made
+set relativenumber 
+
 " put cursor to mouse on click
 set mouse=a
 
