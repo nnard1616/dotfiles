@@ -69,6 +69,28 @@ Plugin 'tpope/vim-endwise'
 " extend you complete me for qmake ?
 Plugin 'rdnetto/ycm-generator'
 
+" more colors
+Plugin 'jeaye/color_coded'
+
+" header file guards
+Plugin 'drmikehenry/vim-headerguard'
+
+" autoclose parentheticals --OLD AND BUGGED
+" Plugin 'Townk/vim-autoclose'
+
+" c/cpp navigation commands
+Plugin 'vim-scripts/a.vim'
+
+" for cpp refactoring
+" Plugin 'LucHermitte/lh-vim-lib'
+" Plugin 'LucHermitte/lh-tags'
+" Plugin 'LucHermitte/lh-dev'
+" Plugin 'LucHermitte/lh-brackets'
+" Plugin 'LucHermitte/vim-refactor'
+
+" for clang-format usage
+Plugin 'rhysd/vim-clang-format'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 "
@@ -227,7 +249,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-    colorscheme atomified
+    colorscheme desert
 catch
 endtry
 
@@ -545,3 +567,9 @@ let g:ale_lint_on_enter = 0
 " => YouCompleteMe 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-clang-format 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:clang_format#code_style = 'llvm'
+map <leader>cf :ClangFormat<cr>
