@@ -66,6 +66,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " Automatic endings
 Plugin 'tpope/vim-endwise'
 
+" extend you complete me for qmake ?
+Plugin 'rdnetto/ycm-generator'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 "
@@ -280,8 +283,8 @@ set wrap "Wrap lines
 """"""""""""""""""""""""""""""
 " Visual mode pressing * or # searches for the current selection
 " Super useful! From an idea by Michael Naumann
-vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
-vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
+"vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
+"vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
