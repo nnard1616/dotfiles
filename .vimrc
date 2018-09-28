@@ -572,4 +572,71 @@ let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 " => vim-clang-format 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:clang_format#code_style = 'llvm'
-map <leader>cf :ClangFormat<cr>
+let g:clang_format#style_options = {
+            \ "BasedOnStyle": "LLVM",
+            \ "AlignAfterOpenBracket": "Align",
+            \ "AlignConsecutiveAssignments": "true",
+            \ "AlignConsecutiveDeclarations": "true",
+            \ "AlignOperands": "true",
+            \ "AlignTrailingComments": "true",
+            \ "AllowAllParametersOfDeclarationOnNextLine": "false",
+            \ "AllowShortBlocksOnASingleLine": "true",
+            \ "AllowShortCaseLabelsOnASingleLine": "false",
+            \ "AllowShortFunctionsOnASingleLine": "Inline",
+            \ "AllowShortIfStatementsOnASingleLine": "true",
+            \ "AllowShortLoopsOnASingleLine": "true",
+            \ "AlwaysBreakAfterReturnType": "None",
+            \ "AlwaysBreakBeforeMultilineStrings": "false",
+            \ "AlwaysBreakTemplateDeclarations": "false",
+            \ "BinPackArguments": "false",
+            \ "BinPackParameters": "false",
+            \ "BreakAfterJavaFieldAnnotations": "true",
+            \ "BreakBeforeBinaryOperators": "NonAssignment",
+            \ "BreakBeforeBraces": "Attach",
+            \ "BreakBeforeTernaryOperators": "true",
+            \ "BreakConstructorInitializers": "AfterColon",
+            \ "BreakStringLiterals": "true",
+            \ "ColumnLimit": 80,
+            \ "CompactNamespaces": "false",
+            \ "ConstructorInitializerAllOnOneLineOrOnePerLine": "true",
+            \ "Cpp11BracedListStyle": "true",
+            \ "DerivePointerAlignment": "false",
+            \ "DisableFormat": "false",
+            \ "FixNamespaceComments": "true",
+            \ "IncludeBlocks": "Regroup",
+            \ "IndentCaseLabels": "true",
+            \ "IndentPPDirectives": "None",
+            \ "IndentWidth": 4,
+            \ "IndentWrappedFunctionNames": "false",
+            \ "KeepEmptyLinesAtTheStartOfBlocks": "true",
+            \ "Language": "Cpp",
+            \ "MaxEmptyLinesToKeep": 2,
+            \ "NamespaceIndentation": "None",
+            \ "PointerAlignment": "Left",
+            \ "ReflowComments": "true",
+            \ "SortIncludes": "true",
+            \ "SortUsingDeclarations": "true",
+            \ "SpaceAfterCStyleCast": "true",
+            \ "SpaceAfterTemplateKeyword": "true",
+            \ "SpaceBeforeAssignmentOperators": "true",
+            \ "SpaceBeforeParens": "ControlStatements",
+            \ "SpaceInEmptyParentheses": "false",
+            \ "SpacesBeforeTrailingComments": 4,
+            \ "SpacesInAngles": "false",
+            \ "SpacesInCStyleCastParentheses": "false",
+            \ "SpacesInContainerLiterals": "true",
+            \ "SpacesInParentheses": "true",
+            \ "SpacesInSquareBrackets": "false",
+            \ "Standard": "Cpp11",
+            \ "TabWidth": 8,
+            \ "UseTab": "Never"}
+
+autocmd FileType c,cpp,h ClangFormatAutoEnable
+" use this if you want to use a local .clang-format file
+" let g:clang_format#detect_style_file = 1
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-headerguard
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufNewFile *.h HeaderguardAdd
