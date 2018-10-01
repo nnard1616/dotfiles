@@ -91,9 +91,12 @@ Plugin 'vim-scripts/a.vim'
 " for clang-format usage
 Plugin 'rhysd/vim-clang-format'
 
+" for automated markdown bulleted lists
+Plugin 'dkarter/bullets.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-"
+
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
@@ -120,8 +123,11 @@ noremap <silent> <C-Z>          u
 inoremap <silent> <C-X>       <C-O><C-R>
 
 " makes space partition insert actions
-inoremap <Space>               <Space><C-g>u
+inoremap <Space>               <C-]><Space><C-g>u
 
+" abbreviation for highlighting in blog md post
+inoreabbrev <buffer> teh the
+inoreabbrev hh ****{:.highlighted}<C-O>16<Left>
 
 " Everything below is adapted from:
 " > https://github.com/amix/vimrc/
