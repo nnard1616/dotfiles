@@ -94,6 +94,18 @@ Plugin 'rhysd/vim-clang-format'
 " for automated markdown bulleted lists
 Plugin 'dkarter/bullets.vim'
 
+" status bar stuff
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+" color scheme
+Plugin 'junegunn/seoul256.vim'
+Plugin 'morhetz/gruvbox'
+Plugin 'fneu/breezy'
+
+" for a bitching toc generator for markdown
+Plugin 'mzlogin/vim-markdown-toc'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -646,3 +658,21 @@ autocmd FileType c,cpp,h ClangFormatAutoEnable
 " => vim-headerguard
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufNewFile *.h HeaderguardAdd
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-airline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:airline_theme='deus'
+"let g:airline_theme='breezy'
+let g:airline_theme='gruvbox'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colorscheme stuff
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:seoul256_background = 234
+colo gruvbox
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Ctags stuff
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>. :CtrlPTag<cr>
